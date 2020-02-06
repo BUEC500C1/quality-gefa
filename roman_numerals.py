@@ -10,7 +10,7 @@ class ToRoman(int):
             raise ValueError('Values over 3999 are not allowed: {}'.format(number))
         if number < 0:
             raise ValueError('Negative values are not allowed: {}'.format(number))
-        return super().__new__(cls, number)
+        return super(ToRoman, cls).__new__(cls, number)
 
     def __init__(self, number):
         to_roman = {1: 'I', 2: 'II', 3: 'III', 4: 'IV', 5: 'V',
